@@ -1,0 +1,32 @@
+
+#docker basic comand
+
+#docker compose
+
+#login to docker hub
+docker login
+
+#create an image to docker
+docker build -t pavanpnaik321/hey-python-flask:0.0.1.RELEASE .  
+
+#create a container
+docker container run -d -p 3000:3000 pavanpnaik321/hey-python-flask:0.0.1.RELEASE
+docker container run -d -p (on main machine ):(on container always 3000 as we have mentioned while building image) image_name
+
+#see all container 
+docker container ls
+docker ps -a
+
+#stop the docker container
+docker container stop (container_name or id)
+
+#create another container on diffenent port
+docker container run -d -p 4000:3000 pavanpnaik321/hey-python-flask:0.0.1.RELEASE
+
+#push the image to the docker hub
+docker push pavanpnaik321/hey-python-flask:0.0.1.RELEASE
+
+#anyone can pull it from docker hub
+docker pull pavanpnaik321/hey-python-flask
+
+#push javascript based api to docker hub
